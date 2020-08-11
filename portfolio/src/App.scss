@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+  width: 100vw;
+  margin:0;
+  background-color: rgb(122, 207, 254);
+  .title{
+    background-color: rgb(215, 215, 215);
+    clip-path: polygon(25% 0%, 100% 0, 100% 80%, 75% 90%, 50% 100%, 25% 90%, 0 80%, 0 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    // position: relative;
+    h3{
+      margin:0;
+      font-size: 5vw;
+    }
+    h2{
+      width:100%;
+      font-size: 10vw;
+      margin:0;
+      background-image: url(./images/textClip.jpg);
+      background-size: cover;
+      background-clip: text;
+      // -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+  .section2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    
+    img{
+      width:100%;
+      height:100vh;
+      clip-path: polygon(0 -20%, 100% 0, 100% 80%, 0% 100%);
+    }
+  }
+}
