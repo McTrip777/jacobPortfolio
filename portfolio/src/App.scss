@@ -29,15 +29,16 @@
   }
   .section2{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // flex-direction: column;
+    // justify-content: center;
     height: 100vh;
     width: 100%;
     
-    img{
-      width:100%;
-      height:100vh;
-      clip-path: polygon(0 -20%, 100% 0, 100% 80%, 0% 100%);
-    }
+  }
+  .contact{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

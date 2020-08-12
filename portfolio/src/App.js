@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import Contact from './contact/Contact';
 // import image from './images/textClip.jpg'
-
+import About from './about/About'
 function App() {
   return (
     <div className="App">
@@ -11,8 +11,10 @@ function App() {
         <h2>PORTFOLIO</h2>
       </div>
       <div className="section2">
-
-        {/* <img src={image} /> */}
+        <About />
+        {/* <Projects /> */}
+      </div>
+      <div className="contact">
         <Contact />
       </div>
     </div>
