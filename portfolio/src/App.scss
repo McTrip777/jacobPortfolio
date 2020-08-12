@@ -27,16 +27,25 @@
       color: transparent;
     }
   }
-  .section2{
+  .about{
     display: flex;
     // flex-direction: column;
     // justify-content: center;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     
   }
-  .contact{
+  .projects{
     height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(215, 215, 215);
+    clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 90%);
+  }
+  .contact{
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;

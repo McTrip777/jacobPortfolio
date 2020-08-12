@@ -27,28 +27,26 @@ function Contact(props) {
     }
 
     return (
-        <div className="wrapper">
-            <form method="post" action="https://formspree.io/xvoglaop">
-                <header className="contactHeader">
-                    <h2>Interested in working together?</h2>
-                    <p>Get in Contact!</p>
-                </header>
-                <div className="row">
-                    <div className="name_email">
-                        <input onChange={updateName} className="nameEmail" type="text" name="name" id="name" placeholder="Name" autocomplete="off" />
-                        <input onChange={updateEmail} className="nameEmail" type="text" name="email" id="email" placeholder="Email" autocomplete="off" />
-                    </div>
-
-                    <input onChange={updateSubject} type="text" name="subject" id="subject" placeholder="Subject" autocomplete="off" />
-                    <textarea onChange={updateMessage} className="subMessage" name="message" id="message" placeholder="Message" ></textarea>
-
-                    <div className="buttons inp">
-                        <input className="btn-one" type="submit" value="Send Message" />
-                        <input className="clearButton" type="reset" value="Clear Form" />
-                    </div>
+        <form method="post" action="https://formspree.io/xvoglaop">
+            <header className="contactHeader">
+                <h2>Interested in working together?</h2>
+                <p>Get in Contact!</p>
+            </header>
+            <div className="row">
+                <div className="name_email">
+                    <input onChange={updateName} className="nameEmail" type="text" name="name" id="name" placeholder="Name" autoComplete="off" />
+                    <input onChange={updateEmail} className="nameEmail" type="text" name="email" id="email" placeholder="Email" autoComplete="off" />
                 </div>
-            </form>
-        </div>
+
+                <input onChange={updateSubject} type="text" name="subject" id="subject" placeholder="Subject" autoComplete="off" />
+                <textarea onChange={updateMessage} className="subMessage" name="message" id="message" placeholder="Message" ></textarea>
+
+                <div className="buttons inp">
+                    <input className="btn-one" type="submit" value="Send Message" />
+                    <input className="clearButton" type="reset" value="Clear Form" />
+                </div>
+            </div>
+        </form>
     )
 }
 export default Contact

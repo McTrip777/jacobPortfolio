@@ -3,16 +3,15 @@ import './about.scss'
 
 const About = (props) => {
     return (
-        <div className="wrapper">
-            <div className="aboutInfo">
-                <div className="aboutTitle">
-                    <h2>About</h2>
-                </div>
-                <p>
-                    I am a Full Stack Web Developer who is passionate about writing
-                    clean code and improving my users' lives. I want to make a
+        <div className="aboutInfo">
+            <div className="aboutTitle">
+                <h2>ABOUT</h2>
+            </div>
+            <p>
+                I am a Full Stack Web Developer who is passionate about writing
+                clean code and improving my users' lives. I want to make a
                         difference in this world doing what I love. <br />
-                    <br />
+                <br />
                         The spark to become a developer started when I was playing a
                         mobile game thinking about how it was made and everything that went into
                         it. I then purchased a starter kit on making phone apps. From
@@ -22,7 +21,6 @@ const About = (props) => {
                         young developer with much to learn but am anxious to learn and
                         grow in the skills I have aquired.
                     </p>
-            </div>
         </div>
     )
 }

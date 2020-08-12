@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Contact from './contact/Contact';
+import Projects from './projects/Projects'
 // import image from './images/textClip.jpg'
 import About from './about/About'
 function App() {
@@ -10,9 +11,11 @@ function App() {
         <h3>Jacob McFaul's</h3>
         <h2>PORTFOLIO</h2>
       </div>
-      <div className="section2">
+      <div className="about section2">
         <About />
-        {/* <Projects /> */}
+      </div>
+      <div className="projects section3">
+        <Projects />
       </div>
       <div className="contact">
         <Contact />
