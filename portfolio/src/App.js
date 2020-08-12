@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import Contact from './contact/Contact';
 // import image from './images/textClip.jpg'
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       <div className="section2">
 
         {/* <img src={image} /> */}
-
+        <Contact />
       </div>
     </div>
   );
