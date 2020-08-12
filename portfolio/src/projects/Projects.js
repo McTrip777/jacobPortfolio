@@ -1,18 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './projects.scss'
-// import calendr from "../img/calendr.png";
-// import treasureHunt from "../img/treasureHunt.png";
-// import GoLife from "../img/GoLife.png";
+import calendr from "../images/calendr.png";
+import treasureHunt from "../images/treasureHunt.png";
+import GoLife from "../images/GoLife.png";
 
 const Projects = (props) => {
-    return (
 
-        <div className="projectContainer">
-            <div className="projectTitle">
-                <h2>PROJECTS</h2>
-            </div>
-            <div className="allProjects">
-                {/* https://calendr.netlify.com/ */}
+    const [project, setProject] = useState(1)
+
+    const rotation = (val) => {
+        if (val === 1) {
+            return (
                 <div className="project project1">
                     <div className="projectTextContainer">
                         <h2>
@@ -25,11 +23,14 @@ const Projects = (props) => {
                             templates with set events.
                                 </p>
                         <a href="https://calendr.netlify.com/">
-                            {/* <img src={calendr}></img> */}
+                            <img src={calendr}></img>
                         </a>
                     </div>
                 </div>
-                {/* https://treasure-hunt-legend.netlify.com/ */}
+            )
+        }
+        else if (val === 2) {
+            return (
                 <div className="project project2">
                     <div className="projectTextContainer">
                         <h2>
@@ -43,10 +44,13 @@ const Projects = (props) => {
                             aad690ee0a6c7fbea1203da3a9b4c72d7aeb3c44
                                 </p>
                         <a href="https://treasure-hunt-legend.netlify.com/">
-                            {/* <img src={treasureHunt}></img> */}
+                            <img src={treasureHunt}></img>
                         </a>
                     </div>
                 </div>
+            )
+        } else {
+            return (
                 <div className="project project3">
                     <div className="projectTextContainer">
                         <h2>
@@ -58,11 +62,46 @@ const Projects = (props) => {
                             them come to life as the generations progress.
                                 </p>
                         <a href="https://golife.netlify.app/">
-                            {/* <img src={GoLife}></img> */}
+                            <img src={GoLife}></img>
                         </a>
                     </div>
                 </div>
+            )
+        }
+    }
+
+    const increment = () => {
+        if (project < 3) {
+            let value = project + 1
+            setProject(value)
+        } else {
+            setProject(1)
+        }
+
+    }
+    const decrement = () => {
+        if (project > 1) {
+            let value = project - 1
+            setProject(value)
+        } else {
+            setProject(3)
+        }
+
+    }
+
+    return (
+        <div className="projectContainer">
+            <div className="projectTitle">
+                <h2>PROJECTS</h2>
             </div>
+            <div className="allProjects">
+                {/* https://calendr.netlify.com/ */}
+                {/* https://treasure-hunt-legend.netlify.com/ */}
+                <div className="leftArrow arrow" onClick={decrement}></div>
+                {rotation(project)}
+                <div className="rightArrow arrow" onClick={increment}></div>
+            </div>
+
         </div>
     )
 }

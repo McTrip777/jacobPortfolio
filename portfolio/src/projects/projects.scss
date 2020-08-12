@@ -1,27 +1,37 @@
 .projectContainer{
-    height:90%;
     width: 100%;
-    
   .projectTitle {
     display: flex;
     justify-content: center;
-    align-items: center;
+    position: relative;
+    top: 3rem;
     h2 {
       font-size: 2.8rem;
     }
   }
   .allProjects {
-    margin: 0 5%;
+    position: relative;
+    top: 5vh;
     display: flex;
-    flex-direction: column;
-    // box-sizing: border-box;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5%;
+    .arrow{
+      min-width:50px;
+      min-height:50px;
+      background-color:black;
+    }
+    .arrow:hover{
+      cursor: pointer;
+    }
+    .leftArrow{
+      clip-path: polygon(50% 0, 30% 50%, 50% 100%, 50% 100%, 0% 50%, 50% 0);
+    }
+    .rightArrow{
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 50% 100%, 70% 50%, 50% 0);
+    }
     .project {
-      // box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      border-radius: 25px;
-      margin: 1rem 0 3rem;
       .projectTextContainer {
         h2 {
           font-size: 2.2rem;
@@ -44,7 +54,7 @@
     @media (max-width: 1000px) {
       .project1 {
         display: flex;
-        flex-direction: column-reverse;
+        // flex-direction: column-reverse;
         border-radius: 0;
         img {
           margin: 5rem auto;
@@ -53,7 +63,7 @@
       }
       .project2 {
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
         // border-top: 2px dashed red;
         // border-bottom: 2px dashed red;
         img {
