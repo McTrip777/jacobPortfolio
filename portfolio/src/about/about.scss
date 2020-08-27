@@ -1,8 +1,10 @@
 .aboutInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 2rem 5% 0;
-    width: 90%;
-    line-height: 1.5rem;
     font-size: 1.3rem;
+    box-sizing: border-box;
     .aboutTitle {
         display: flex;
         justify-content: center;
@@ -11,6 +13,19 @@
         margin: 0 2rem;
         h2 {
             font-size: 2.5rem;
+            color: white;
+            text-shadow:1px 1px 5px black;
+        }
+    }
+    p{
+        height: 60vh;
+        line-height: 2.2rem;
+        color: white;
+        text-shadow:1px 1px 5px black;
+    }
+    @media(max-width: 450px) {
+        p{
+            line-height: 1.5rem;
         }
     }
 }
