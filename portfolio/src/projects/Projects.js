@@ -9,27 +9,27 @@ const Projects = (props) => {
     const [project, setProject] = useState(1)
 
     const rotation = (val) => {
+        // if (val === 1) {
+        //     return (
+        //         <div className="project project1">
+        //             <div className="projectTextContainer">
+        //                 <h2>
+        //                     Calendr
+        //                         </h2>
+        //                 <p>
+        //                     Calendr is an app that was built for groups to stay up to date
+        //                     on the latest events. The owner of the calendr can share all
+        //                     of the upcoming events with times and description, using
+        //                     templates with set events.
+        //                         </p>
+        //                 <a href="https://calendr.netlify.com/">
+        //                     <img src={calendr}></img>
+        //                 </a>
+        //             </div>
+        //         </div>
+        //     )
+        // }
         if (val === 1) {
-            return (
-                <div className="project project1">
-                    <div className="projectTextContainer">
-                        <h2>
-                            Calendr
-                                </h2>
-                        <p>
-                            Calendr is an app that was built for groups to stay up to date
-                            on the latest events. The owner of the calendr can share all
-                            of the upcoming events with times and description, using
-                            templates with set events.
-                                </p>
-                        <a href="https://calendr.netlify.com/">
-                            <img src={calendr}></img>
-                        </a>
-                    </div>
-                </div>
-            )
-        }
-        else if (val === 2) {
             return (
                 <div className="project project2">
                     <div className="projectTextContainer">
@@ -71,7 +71,7 @@ const Projects = (props) => {
     }
 
     const increment = () => {
-        if (project < 3) {
+        if (project < 2) {
             let value = project + 1
             setProject(value)
         } else {
@@ -84,7 +84,7 @@ const Projects = (props) => {
             let value = project - 1
             setProject(value)
         } else {
-            setProject(3)
+            setProject(2)
         }
 
     }
