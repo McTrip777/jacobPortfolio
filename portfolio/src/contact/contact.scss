@@ -1,4 +1,5 @@
 form{
+    
     .contactHeader {
         margin-bottom: 3rem;
         h2{
@@ -26,30 +27,18 @@ form{
             }
         }
     }
-    form{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        width: 100%;
-        height: 100%;
-    }
-    // @media(max-width: 700px){
-    //     form{
-            
-    //     }
-    // }
     .row {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        .name_email{
+        .nameAndEmail{
             width: 80%;
             display: flex;
             justify-content: space-between;
             .nameEmail{
                 width: 48%;
-                font-size: 1.8rem;
+                font-size: 1rem;
                 border-radius: 5px;
                 margin: 20px 0 0;
                 background: #ffffff;
@@ -61,7 +50,7 @@ form{
         }
             input{
                 width:80%;
-                font-size: 1.8rem;
+                font-size: 1rem;
                 border-radius: 5px;
                 margin: 10px;
                 background:  #ffffff;
@@ -74,13 +63,13 @@ form{
             .subMessage{
                 width: 80%;
                 margin: 10px;
-                font-size: 1.8rem;
+                font-size: 1rem;
                 resize: none;
                 border-radius: 5px;
                 background:  #ffffff;
                 border: none;
                 outline: none;
-                padding: .8rem 0 .8rem 1rem;
+                padding: .8rem 0 2rem 1rem;
                 box-sizing: border-box;
                 caret-color: black;
             }
@@ -96,13 +85,13 @@ form{
                 margin: 0;
                 width: 45%;
             }
-            .btn-one:hover{
+            .btnOne:hover{
                 background-color:rgb(124, 190, 140);
             }
-            .clearButton{
+            .clearBtn{
                 background-color: rgb(236, 170, 173);
             }
-            .clearButton:hover{
+            .clearBtn:hover{
                 background-color: rgb(201, 139, 139);
             }
         }

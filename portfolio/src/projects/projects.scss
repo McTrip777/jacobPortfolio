@@ -1,5 +1,7 @@
-.projectContainer{
-    width: 100%;
+.projectContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
   .projectTitle {
     display: flex;
     justify-content: center;
@@ -9,67 +11,75 @@
       font-size: 2.8rem;
     }
   }
+  .projectButtons {
+    height: 100%;
+    width: 10%;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: black;
+      font-size: 2.5em;
+    }
+  }
+  .projectButtons:hover {
+    cursor: pointer;
+    background: rgba(128, 128, 128, 0.534);
+    position: absolute;
+    z-index: 100;
+    p {
+      color: white;
+    }
+  }
+  .left {
+    left: 0;
+  }
+  .right {
+    right: 0;
+  }
+
   .allProjects {
-    position: relative;
-    top: 5vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5%;
-    .arrow{
-      min-width:50px;
-      min-height:50px;
-      background-color:black;
-    }
-    .arrow:hover{
-      cursor: pointer;
-    }
-    .leftArrow{
-      clip-path: polygon(50% 0, 30% 50%, 50% 100%, 50% 100%, 0% 50%, 50% 0);
-    }
-    .rightArrow{
-      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 50% 100%, 70% 50%, 50% 0);
-    }
+    position: absolute;
+    height: 80vh;
+    width: 100%;
+    z-index: 0;
+
     .project {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
       .projectTextContainer {
         h2 {
           font-size: 2.2rem;
         }
         p {
-        margin-bottom: 2rem;
+          margin-bottom: 2rem;
         }
         a {
-            text-decoration: none;
-            width: 100%;
-            height:100%;
-            img {
-              cursor: pointer;
-              border-radius: 15px;
-              width: 80%;
-            }
+          text-decoration: none;
+          width: 100%;
+          height: 100%;
+          img {
+            cursor: pointer;
+            border-radius: 15px;
+            width: 80%;
           }
+        }
       }
     }
-    @media (max-width: 1000px) {
-      .project1 {
+    @media (min-width: 1400px) {
+      .project {
         display: flex;
-        // flex-direction: column-reverse;
         border-radius: 0;
-        img {
-          margin: 5rem auto;
-          width: 75%;
-        }
       }
-      .project2 {
-        display: flex;
-        // flex-direction: column;
-        // border-top: 2px dashed red;
-        // border-bottom: 2px dashed red;
-        img {
-          margin: 5rem auto 0;
-          width: 75%;
-        }
+      .project .projectTextContainer a img {
+        // margin: 5rem auto;
+        width: 70em;
       }
     }
   }

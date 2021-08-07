@@ -1,30 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './contact.scss'
 
 function Contact(props) {
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-    const [subject, setSubject] = useState('');
+    const [state, setState] = useState({ name: "", email: "", message: "" });
 
+    function onChange(event) {
+        const { name, value } = event.target;
+        setState(prevState => ({ ...prevState, [name]: value }));
+    }
 
-    const updateName = (name) => {
-        const value = name.target.value
-        setName(value)
+    function clearState() {
+        setState({ name: "", email: "", message: "" });
     }
-    const updateEmail = (email) => {
-        const value = email.target.value
-        setEmail(value)
-    }
-    const updateMessage = (message) => {
-        const value = message.target.value
-        setMessage(value)
-    }
-    const updateSubject = (subject) => {
-        const value = subject.target.value
-        setSubject(value)
-    }
+    // console.log(document.getElementsByClassName("btnOne")[0].disabled = false)
+    useEffect(() => {
+        if (state.name !== "" && state.message !== "" && state.email !== "") {
+            document.getElementsByClassName("btnOne")[0].disabled = false;
+        } else {
+            document.getElementsByClassName("btnOne")[0].disabled = true;
+        }
+    }, [state])
 
     return (
         <form method="post" action="https://formspree.io/xvoglaop">
@@ -33,17 +29,15 @@ function Contact(props) {
                 <p>Get in Contact!</p>
             </header>
             <div className="row">
-                <div className="name_email">
-                    <input onChange={updateName} className="nameEmail" type="text" name="name" id="name" placeholder="Name" autoComplete="off" />
-                    <input onChange={updateEmail} className="nameEmail" type="text" name="email" id="email" placeholder="Email" autoComplete="off" />
+                <div className="nameAndEmail">
+                    <input className="nameEmail name" type="text" value={state.name} name="name" id="name" placeholder="Name" autoComplete="off" onChange={onChange} />
+                    <input className="nameEmail email" type="text" value={state.email} name="email" id="email" placeholder="Email" autoComplete="off" onChange={onChange} />
                 </div>
-
-                <input onChange={updateSubject} type="text" name="subject" id="subject" placeholder="Subject" autoComplete="off" />
-                <textarea onChange={updateMessage} className="subMessage" name="message" id="message" placeholder="Message" ></textarea>
+                <textarea className="subMessage" value={state.message} name="message" id="message" placeholder="Message" onChange={onChange} ></textarea>
 
                 <div className="buttons inp">
-                    <input className="btn-one" type="submit" value="Send Message" />
-                    <input className="clearButton" type="reset" value="Clear Form" />
+                    <input className="btnOne" type="submit" value="Send Message" disabled />
+                    <input className="clearBtn" type="reset" value="Clear Form" onClick={clearState} />
                 </div>
             </div>
         </form>

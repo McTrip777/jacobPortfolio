@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
       <div className="title section1">
-        <h3>Jacob McFaul's</h3>
         <h2>PORTFOLIO</h2>
       </div>
       <div className="about section2">
