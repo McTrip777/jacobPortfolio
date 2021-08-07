@@ -25,7 +25,7 @@ const Projects = (props) => {
             return proj.img
         })
         setImages(images)
-    })
+    },[])
 
     useEffect(() => {
         projectDisplay()
