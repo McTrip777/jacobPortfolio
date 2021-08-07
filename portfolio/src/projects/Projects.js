@@ -4,6 +4,7 @@ import './projects.scss'
 
 const Projects = (props) => {
     const [index, setIndex] = useState(0)
+    const [images, setImages] = useState([])
     let currentProj
 
     const projectDisplay = () => {
@@ -12,7 +13,7 @@ const Projects = (props) => {
                 <h2>{ProjectData[index].name}</h2>
                 <p>{ProjectData[index].description}</p>
                 <a href={ProjectData[index].url} target="_blank">
-                    <img src={ProjectData[index].img}></img>
+                    <img src={images[index]}></img>
                 </a>
             </div>
         </div>
@@ -20,6 +21,10 @@ const Projects = (props) => {
     }
 
     useEffect(() => {
+        const images = ProjectData.map((proj) => {
+            return proj.img
+        })
+        setImages(images)
         projectDisplay()
     }, [index])
 
