@@ -1,24 +1,24 @@
 .App {
   text-align: center;
-  // width: 100vw;
-  // margin:0;
-  // background-color: rgb(97, 96, 96);
+  width: 100vw;
+  margin:0;
+  background-color: rgb(97, 96, 96);
   .title{
-    // background-color: rgb(215, 215, 215);
-    // clip-path: polygon(25% 0%, 100% 0, 100% 80%, 75% 90%, 50% 100%, 25% 90%, 0 80%, 0 0);
+    background-color: rgb(215, 215, 215);
+    clip-path: polygon(25% 0%, 100% 0, 100% 80%, 75% 90%, 50% 100%, 25% 90%, 0 80%, 0 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // height: 100vh;
-    // width: 100%;
-    // position: relative;
-    // h3{
-    //   margin:0;
-    //   font-size: 6vw;
-    // }
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    h3{
+      margin:0;
+      font-size: 6vw;
+    }
     h2{
       width:100%;
-      font-size: 8vw;
+      font-size: 10vw;
       margin:0;
       background-image: url(./images/textClipSmall.jpg);
       background-size: cover;
@@ -27,25 +27,25 @@
       color: transparent;
     }
     .name{
-      margin-top:4rem;
+      // margin-top:4rem;
     }
   }
   .about{
     display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // height: 50vh;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
     width: 100%;
     
   }
   .projects{
     height: 100vh;
     width: 100%;
-    // background-color: rgb(215, 215, 215);
-    // clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 90%);
+    background-color: rgb(215, 215, 215);
+    clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 90%);
   }
   .contact{
-    // height: 90vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
